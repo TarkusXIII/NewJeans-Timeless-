@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101d30">
+    <meta name="description" content="Um relógio digital inspirado no universo NewJeans.">
+    <title>Time with NewJeans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-background" aria-hidden="true">
+        <video id="wallpaper-video" loop autoplay playsinline preload="metadata"></video>
+    </div>
+
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Time with NewJeans, início">
+                <span class="brand-mark" aria-hidden="true">✳</span>
+                <span>TIME WITH <strong>NEWJEANS</strong></span>
+            </a>
+            <div class="topbar-actions">
+                <span class="topbar-note"><span class="live-dot"></span> LIVE</span>
+                <button id="btn-fundo" class="clip-button" type="button" aria-label="Trocar vídeo de fundo" title="Trocar vídeo de fundo">
+                    <span>CHANGE CLIP</span>
+                    <strong id="clip-number">01</strong>
+                </button>
+            </div>
+        </header>
+
+        <aside class="clip-caption" aria-hidden="true">
+            <div class="nj-brand">
+                <span>NEWJEANS</span>
+                <img class="bunny-mark" src="Fundos/newjeans-bunny.png" alt="" />
+            </div>
+            <span class="clip-caption__line"></span>
+        </aside>
+
+        <section class="clock-card" aria-labelledby="page-title">
+            <button id="btn-panel-toggle" class="panel-toggle" type="button" aria-label="Minimizar painel" aria-expanded="true">−</button>
+            <div class="card-topline">
+                <span class="eyebrow">DAY 001 / NEW TIME</span>
+                <span id="wallpaper-hint" class="wallpaper-hint">TROQUE O CLIP</span>
+            </div>
+            <div class="stage-title">
+                <p id="page-title">NEWJEANS / TIMELESS</p>
+                <span>LIVE SESSION</span>
+            </div>
+
+            <div class="track-lockup" aria-label="Clip em reprodução">
+                <span class="track-lockup__number" id="clip-number-large">01</span>
+                <div>
+                    <p>NOW PLAYING</p>
+                    <h1>CLIP <span id="clip-title">ATTENTION</span></h1>
+                </div>
+            </div>
+
+            <button id="btn-video-toggle" class="video-toggle" type="button" aria-label="Pausar vídeo" aria-pressed="true">
+                <span class="video-toggle__icon" aria-hidden="true">Ⅱ</span>
+                <span id="video-toggle-label">PAUSE</span>
+            </button>
+
+            <aside class="minimal-time" aria-label="Horário local">
+                <span>LOCAL TIME</span>
+                <time id="relogio-local">00:00:00</time>
+                <div id="data-local" class="calendar-block" aria-label="Current date">
+                    <span class="calendar-block__month" id="calendar-month">NOV</span>
+                    <strong class="calendar-block__day" id="calendar-day">01</strong>
+                    <span class="calendar-block__meta">
+                        <span id="calendar-weekday">SUN</span>
+                        <span id="calendar-year">2026</span>
+                    </span>
+                </div>
+            </aside>
+
+            <section class="audio-visualizer" aria-label="Visualizador de áudio">
+                <div class="audio-visualizer__heading">
+                    <div class="nj-merch-seal" aria-label="NewJeans Timeless">
+                        <span class="nj-merch-seal__star" aria-hidden="true">✦</span>
+                        <span class="nj-merch-seal__monogram">NJ</span>
+                        <span class="nj-merch-seal__name">TIMELESS</span>
+                    </div>
+                </div>
+                <div id="audio-bars" class="audio-visualizer__bars" aria-hidden="true"></div>
+            </section>
+
+        </section>
+
+        <div class="caption-rule" aria-hidden="true"></div>
+        <p class="page-caption" aria-label="Slow down, look around. You're right on time">
+            <span class="page-caption__left">SLOW DOWN, LOOK AROUND</span>
+            <span class="page-caption__star" aria-hidden="true">✧</span>
+            <span class="page-caption__right">YOU'RE RIGHT ON TIME</span>
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

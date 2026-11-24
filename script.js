@@ -154,6 +154,10 @@ const wallpapers = [
         title: "NEWJEANS"
     },
     {
+        video: "Fundos/Supernatural.webm",
+        title: "SUPERNATURAL"
+    },
+    {
         image: "Fundos/newjeans.jpg",
         title: "NEWJEANS"
     }
@@ -375,7 +379,7 @@ function minimizePanel() {
     if (panelToggle) {
         panelToggle.setAttribute("aria-expanded", "false");
         panelToggle.setAttribute("aria-label", "Mostrar painel");
-        panelToggle.textContent = "‹";
+        panelToggle.textContent = "<";
     }
     savePreference("panelState", "collapsed");
 }
@@ -440,7 +444,7 @@ function expandPanel() {
     if (panelToggle) {
         panelToggle.setAttribute("aria-expanded", "true");
         panelToggle.setAttribute("aria-label", "Minimizar painel");
-        panelToggle.textContent = "−";
+        panelToggle.textContent = ">";
     }
     savePreference("panelState", "expanded");
 }
@@ -475,7 +479,7 @@ function restorePanelState() {
     if (panelToggle) {
         panelToggle.setAttribute("aria-expanded", "false");
         panelToggle.setAttribute("aria-label", "Mostrar painel");
-        panelToggle.textContent = "‹";
+        panelToggle.textContent = "<";
     }
     window.requestAnimationFrame(() => animateCaption("minimize"));
     return true;
